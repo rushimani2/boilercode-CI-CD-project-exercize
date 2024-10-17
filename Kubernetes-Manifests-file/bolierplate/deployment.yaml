@@ -1,11 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api
+  name: boilerplate
   namespace: boilerplate
   labels:
-    role: api
-    env: demo
+    role: boilerplate
 spec:
   replicas: 2
   strategy:
@@ -15,17 +14,17 @@ spec:
       maxUnavailable: 25%
   selector:
     matchLabels:
-      role: api
+      role: boilerplate
   template:
     metadata:
       labels:
-        role: api
+        role: boilerplate
     spec:
       imagePullSecrets:
       - name: ecr-registry-secret
       containers:
-      - name: api
+      - name: boilerplate
         image: 767828748475.dkr.ecr.us-east-1.amazonaws.com/bolierplate:9
         imagePullPolicy: Always
         ports:
-        - containerPort: 3500
+        - containerPort: 6041
