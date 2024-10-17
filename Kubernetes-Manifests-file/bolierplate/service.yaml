@@ -7,6 +7,6 @@ spec:
   ports:
   - port: 6041
     protocol: TCP
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     role: boilerplate
