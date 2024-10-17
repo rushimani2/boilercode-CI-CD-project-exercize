@@ -20,4 +20,4 @@ spec:
               service:
                 name: boilerplate
                 port:
-                  number: 80
+                  number: 6041
