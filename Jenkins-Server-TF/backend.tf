@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "threetierproject07"
+    bucket         = "bolier-plate-project"
     region         = "us-east-1"
     key            = "End-to-End-Kubernetes-Three-Tier-DevSecOps-Project/Jenkins-Server-TF/terraform.tfstate"
-    dynamodb_table = "rushi_lock"
+    dynamodb_table = "db_lock"
     encrypt        = true
   }
   required_version = ">=0.13.0"
