@@ -24,7 +24,14 @@ spec:
       - name: ecr-registry-secret
       containers:
       - name: boilerplate
-        image: 767828748475.dkr.ecr.us-east-1.amazonaws.com/bolierplate:20
+        image: 767828748475.dkr.ecr.us-east-1.amazonaws.com/boilerplate:20
         imagePullPolicy: Always
         ports:
         - containerPort: 6041
+        resources:
+          requests:
+            memory: "100Mi"  
+            cpu: "150m"      
+          limits:
+            memory: "512Mi"  
+            cpu: "500m"      
